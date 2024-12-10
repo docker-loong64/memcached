@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+
 declare -A aliases=(
 	[1]='latest'
 )
@@ -58,7 +59,7 @@ cat <<-EOH
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
-GitRepo: https://github.com/docker-library/memcached.git
+GitRepo: https://github.com/docker-loong64/memcached.git
 EOH
 
 # prints "$2$1$3$1...$N"
@@ -74,10 +75,10 @@ for version; do
 	fullVersion="$(jq -r '.[env.version].version' versions.json)"
 
 	versionAliases=()
-	while [ "${fullVersion%.*}" != "$fullVersion" ]; do
-		versionAliases+=( $fullVersion )
-		fullVersion="${fullVersion%.*}"
-	done
+	#while [ "${fullVersion%.*}" != "$fullVersion" ]; do
+	#	versionAliases+=( $fullVersion )
+	#	fullVersion="${fullVersion%.*}"
+	#done
 	versionAliases+=(
 		$fullVersion
 		${aliases[$version]:-}
@@ -97,7 +98,7 @@ for version; do
 		fi
 
 		parent="$(awk 'toupper($1) == "FROM" { print $2 }' "$dir/Dockerfile")"
-		arches="${parentRepoToArches[$parent]}"
+		arches="loong64"
 
 		suite="${parent#*:}" # "bookworm-slim", "bookworm"
 		suite="${suite%-slim}" # "bookworm"

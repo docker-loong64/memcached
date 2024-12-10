@@ -1,13 +1,354 @@
 {
-  "1": {
+  "1.6.33": {
     "version": "1.6.33",
     "url": "https://memcached.org/files/memcached-1.6.33.tar.gz",
     "sha1": "e884ea1778494a3c57a78fab845ab468679329a1",
     "alpine": {
-      "version": "3.21"
+      "version": "3.19"
     },
     "debian": {
-      "version": "bookworm"
+      "version": "sid"
+    }
+  },
+  "1.6.32": {
+    "version": "1.6.32",
+    "url": "https://memcached.org/files/memcached-1.6.32.tar.gz",
+    "sha1": "a6377de830d15e17b769184df6ad20766c2279d9",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.31": {
+    "version": "1.6.31",
+    "url": "https://memcached.org/files/memcached-1.6.31.tar.gz",
+    "sha1": "85e2cb9520beba71d7fc69f5717208a57facde28",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.30": {
+    "version": "1.6.30",
+    "url": "https://memcached.org/files/memcached-1.6.30.tar.gz",
+    "sha1": "6482b69c80132ebcbd91cff63b4bab2a3b2b8f7a",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.29": {
+    "version": "1.6.29",
+    "url": "https://memcached.org/files/memcached-1.6.29.tar.gz",
+    "sha1": "a9699aed111d86b6e37b3ce5e6ef4e7539582d5f",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.28": {
+    "version": "1.6.28",
+    "url": "https://memcached.org/files/memcached-1.6.28.tar.gz",
+    "sha1": "d7857f9bf51abb2d2106fc6c278682d2f5d7471b",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.27": {
+    "version": "1.6.27",
+    "url": "https://memcached.org/files/memcached-1.6.27.tar.gz",
+    "sha1": "baf2e7494e1f62d275ff29a99f270abbdb923f75",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.26": {
+    "version": "1.6.26",
+    "url": "https://memcached.org/files/memcached-1.6.26.tar.gz",
+    "sha1": "03b9ea47eb9819bf0f53f48db908f45150f1072b",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.25": {
+    "version": "1.6.25",
+    "url": "https://memcached.org/files/memcached-1.6.25.tar.gz",
+    "sha1": "8825b31936100c90439d2447182ca2d49ecca9a0",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.24": {
+    "version": "1.6.24",
+    "url": "https://memcached.org/files/memcached-1.6.24.tar.gz",
+    "sha1": "ee5760180a59520794b046b3fe38b923f8a6ad28",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.23": {
+    "version": "1.6.23",
+    "url": "https://memcached.org/files/memcached-1.6.23.tar.gz",
+    "sha1": "d5490856170453b15a782ad55ffdea188c2eade0",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.22": {
+    "version": "1.6.22",
+    "url": "https://memcached.org/files/memcached-1.6.22.tar.gz",
+    "sha1": "7a691f390d59616dbebfc9e2e4942d499c39a338",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.21": {
+    "version": "1.6.21",
+    "url": "https://memcached.org/files/memcached-1.6.21.tar.gz",
+    "sha1": "6d899680b4ba4b76b6c92120143cf87630ee984a",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.20": {
+    "version": "1.6.20",
+    "url": "https://memcached.org/files/memcached-1.6.20.tar.gz",
+    "sha1": "face85ed6fad41432ad818445b24eca55bccdd78",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.19": {
+    "version": "1.6.19",
+    "url": "https://memcached.org/files/memcached-1.6.19.tar.gz",
+    "sha1": "105e87e7fbf13fb826c5d81e4646c865c56f14d1",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.18": {
+    "version": "1.6.18",
+    "url": "https://memcached.org/files/memcached-1.6.18.tar.gz",
+    "sha1": "be16909bb75ab972ee5fe438312501de01c4725a",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.17": {
+    "version": "1.6.17",
+    "url": "https://memcached.org/files/memcached-1.6.17.tar.gz",
+    "sha1": "e25639473e15f1bd9516b915fb7e03ab8209030f",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.16": {
+    "version": "1.6.16",
+    "url": "https://memcached.org/files/memcached-1.6.16.tar.gz",
+    "sha1": "724f31c3462fb6b07264d72d0043fd65545fd84a",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.15": {
+    "version": "1.6.15",
+    "url": "https://memcached.org/files/memcached-1.6.15.tar.gz",
+    "sha1": "badcfa0d65f5797cc9c2f957f3fbfedbd8c13411",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.14": {
+    "version": "1.6.14",
+    "url": "https://memcached.org/files/memcached-1.6.14.tar.gz",
+    "sha1": "be64c11d34f04bd1855100b8b5ad9ae8b45e0ab0",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.13": {
+    "version": "1.6.13",
+    "url": "https://memcached.org/files/memcached-1.6.13.tar.gz",
+    "sha1": "b9da57ba63ba8de8a980fe0fe2fedc8d59e1dfe3",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.12": {
+    "version": "1.6.12",
+    "url": "https://memcached.org/files/memcached-1.6.12.tar.gz",
+    "sha1": "40d43e98f149e13e6c81eee813e6734f23413a01",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.10": {
+    "version": "1.6.10",
+    "url": "https://memcached.org/files/memcached-1.6.10.tar.gz",
+    "sha1": "cb5b9fe77a2a59cc6cc7103a415bc07df9ddc6ec",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.9": {
+    "version": "1.6.9",
+    "url": "https://memcached.org/files/memcached-1.6.9.tar.gz",
+    "sha1": "42ae062094fdf083cfe7b21ff377c781011c2be1",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.8": {
+    "version": "1.6.8",
+    "url": "https://memcached.org/files/memcached-1.6.8.tar.gz",
+    "sha1": "8f3efd851efc5b822bd991b93d06a271b2fac052",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.7": {
+    "version": "1.6.7",
+    "url": "https://memcached.org/files/memcached-1.6.7.tar.gz",
+    "sha1": "49336bb0a4b7ad296422b08148581ed54edf32d0",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.6": {
+    "version": "1.6.6",
+    "url": "https://memcached.org/files/memcached-1.6.6.tar.gz",
+    "sha1": "d8895b12dc9fc82b389f1713e2c09cc6ca3d03e4",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.5": {
+    "version": "1.6.5",
+    "url": "https://memcached.org/files/memcached-1.6.5.tar.gz",
+    "sha1": "1ddb5f37f69946b63512ad0f89dc448ff7ba5713",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.4": {
+    "version": "1.6.4",
+    "url": "https://memcached.org/files/memcached-1.6.4.tar.gz",
+    "sha1": "c69d1af1956212e8cafe7b2ad0e88dd04f113d67",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.3": {
+    "version": "1.6.3",
+    "url": "https://memcached.org/files/memcached-1.6.3.tar.gz",
+    "sha1": "bcd6d0c076ca2b62e9bd31f6669acc8563df7db1",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.2": {
+    "version": "1.6.2",
+    "url": "https://memcached.org/files/memcached-1.6.2.tar.gz",
+    "sha1": "a6a07f0433adaa13a3cafdf8c26acb640cdd001f",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
+    }
+  },
+  "1.6.1": {
+    "version": "1.6.1",
+    "url": "https://memcached.org/files/memcached-1.6.1.tar.gz",
+    "sha1": "6e337924dbf953bfabda512405d710d9757c97c1",
+    "alpine": {
+      "version": "3.19"
+    },
+    "debian": {
+      "version": "sid"
     }
   }
 }

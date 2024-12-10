@@ -1,56 +1,30 @@
-{{ if env.variant == "alpine" then ( -}}
-FROM lcr.loongnix.cn/library/alpine:{{ .alpine.version }}
-{{ ) else ( -}}
-FROM lcr.loongnix.cn/library/debian:{{ .debian.version }}-slim
-{{ ) end -}}
+#
+# NOTE: THIS DOCKERFILE IS GENERATED VIA "apply-templates.sh"
+#
+# PLEASE DO NOT EDIT IT DIRECTLY.
+#
+
+FROM lcr.loongnix.cn/library/debian:sid-slim
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
-{{ if env.variant == "alpine" then ( -}}
-RUN set -eux; \
-	addgroup -g 11211 memcache; \
-	adduser -D -u 11211 -G memcache memcache
-{{ ) else ( -}}
 RUN set -eux; \
 	groupadd --system --gid 11211 memcache; \
 	useradd --system --gid memcache --uid 11211 memcache
-{{ ) end -}}
 
 # ensure SASL's "libplain.so" is installed as per https://github.com/memcached/memcached/wiki/SASLHowto
-{{ if env.variant == "alpine" then ( -}}
-RUN apk add --no-cache libsasl
-{{ ) else ( -}}
 RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		libsasl2-modules \
 	; \
 	rm -rf /var/lib/apt/lists/*
-{{ ) end -}}
 
-ENV MEMCACHED_VERSION {{ .version }}
-ENV MEMCACHED_URL {{ .url }}
-ENV MEMCACHED_SHA1 {{ .sha1 }}
+ENV MEMCACHED_VERSION 1.6.17
+ENV MEMCACHED_URL https://memcached.org/files/memcached-1.6.17.tar.gz
+ENV MEMCACHED_SHA1 e25639473e15f1bd9516b915fb7e03ab8209030f
 
 RUN set -eux; \
 	\
-{{ if env.variant == "alpine" then ( -}}
-	apk add --no-cache --virtual .build-deps \
-		ca-certificates \
-		coreutils \
-		cyrus-sasl-dev \
-		dpkg-dev dpkg \
-		gcc \
-		libc-dev \
-		libevent-dev \
-		linux-headers \
-		make \
-		openssl \
-		openssl-dev \
-		perl \
-		perl-io-socket-ssl \
-		perl-utils \
-	; \
-{{ ) else ( -}}
 	savedAptMark="$(apt-mark showmanual)"; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
@@ -67,7 +41,6 @@ RUN set -eux; \
 		wget \
 	; \
 	rm -rf /var/lib/apt/lists/*; \
-{{ ) end -}}
 	\
 	wget -O memcached.tar.gz "$MEMCACHED_URL"; \
 	echo "$MEMCACHED_SHA1  memcached.tar.gz" | sha1sum -c -; \
@@ -91,29 +64,15 @@ RUN set -eux; \
 	nproc="$(nproc)"; \
 	make -j "$nproc"; \
 	\
-{{ if env.variant == "debian" then ( -}}
 # see https://github.com/docker-library/memcached/pull/54#issuecomment-562797748 and https://bugs.debian.org/927461 for why we have to munge openssl.cnf
 	sed -i.bak 's/SECLEVEL=2/SECLEVEL=1/g' /etc/ssl/openssl.cnf; \
-{{ ) else "" end -}}
-{{ if env.variant == "debian" then ( -}}
 	mv /etc/ssl/openssl.cnf.bak /etc/ssl/openssl.cnf; \
-{{ ) else "" end -}}
 	\
 	make install; \
 	\
 	cd /; \
 	rm -rf /usr/src/memcached; \
 	\
-{{ if env.variant == "alpine" then ( -}}
-	runDeps="$( \
-		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
-			| tr ',' '\n' \
-			| sort -u \
-			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
-	)"; \
-	apk add --no-network --virtual .memcached-rundeps $runDeps; \
-	apk del --no-network .build-deps; \
-{{ ) else ( -}}
 	apt-mark auto '.*' > /dev/null; \
 	apt-mark manual $savedAptMark > /dev/null; \
 	find /usr/local -type f -executable -exec ldd '{}' ';' \
@@ -125,7 +84,6 @@ RUN set -eux; \
 		| xargs -r apt-mark manual \
 	; \
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
-{{ ) end -}}
 	\
 	memcached -V
 
